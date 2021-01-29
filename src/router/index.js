@@ -1,15 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
   {
     path: '/se-connecter',
     component: () => import('../views/seConnecter.vue')
@@ -17,11 +11,10 @@ const routes = [
   {
     path: '/creer-compte',
     component: () => import('../views/creerCompte.vue')
-  }
-  ,
+  },
   {
-    path: '/header',
-    component: () => import('../views/Header.vue')
+    path: '/conversations',
+    component: () => import('../views/Conversations.vue')
   }
 ]
 

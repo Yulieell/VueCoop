@@ -10,8 +10,8 @@
       </sui-dropdown>
 
       <sui-menu-menu position="right">
-        <sui-menu-item right>
-          <p class="message"><router-link to="/se-connecter">Se desconnecter</router-link></p>
+        <sui-menu-item right >
+          <p id="message" @click="seDesconnecter">Se desconnecter</p>
         </sui-menu-item>
       </sui-menu-menu>
     </sui-menu>
@@ -30,7 +30,12 @@ export default {
   },
   mounted() {
   },
-  methods: {},
+  methods: {
+      seDesconnecter(){
+          this.$store.commit('setMembre', ' ');
+          this.$router.push('/se-connecter');
+      }
+  },
 };
 </script>
 <style>
@@ -42,5 +47,10 @@ export default {
     text-align: center;
     background-color: #303030;
     color: white;
+}
+
+#message{
+    cursor: pointer;
+    color: teal;
 }
 </style>

@@ -36,7 +36,7 @@ export default {
         .then((response) => {
           console.log(response.data);
           this.$store.commit('setMembre', response.data.member);
-          this.$router.push('/header');
+          this.$router.push('/conversations');
         })
         .catch((error) => {
           var error = document.getElementById("error").style.display= "block";
